@@ -11,7 +11,7 @@ let id;
 // 确定按钮
 let ensure_btn;
 
-
+reloadPage();
 
 
 KISSY.ready(function(S) {
