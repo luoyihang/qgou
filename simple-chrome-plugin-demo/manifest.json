@@ -1,5 +1,5 @@
 {
-	"manifest_version": 1,
+	"manifest_version": 2,
 	"name": "Chrome插件demo",
 	"version": "1.0",
 	"description": "最简单的Chrome插件demo，需要快速做一个简单的插件时可以基于这个仓库开发",
@@ -18,7 +18,9 @@
 	[
 		{
 			"matches": ["<all_urls>"],
-			"js": ["js/jquery-1.8.3.js", "js/content-script.js"]
+			"js": ["js/jquery-1.8.3.js", "js/seed-min.js", "js/content-script.js",
+				"js/jd_buy.js"
+			]
 		}
 	],
 	"web_accessible_resources": 
