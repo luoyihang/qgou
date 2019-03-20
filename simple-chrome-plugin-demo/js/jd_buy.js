@@ -7,7 +7,7 @@ function jd_cart() {
     }
     console.log("去结算");
     $(".submit-btn")[0].click();
-    setTimeout("jd_cart();", 1000);
+    setTimeout("jd_cart();", 500);
 }
 
 // 京东提交订单
