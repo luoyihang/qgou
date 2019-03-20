@@ -70,16 +70,11 @@ KISSY.ready(function(S) {
         });
         check_jd_buy();
     } else if (url.indexOf("https://cart.jd.com") >= 0) {
-        // 全选
-        if ($("#toggle-checkboxes_down").attr("checked") !== "checked") {
-            console.log("全选");
-            document.getElementById("toggle-checkboxes_down").click();
-        }
-        console.log("去结算");
-        $(".submit-btn")[0].click();
+        // 购物车
+        jd_cart();
     } else if (url.indexOf("https://trade.jd.com") >= 0) {
-        console.log("进入提交订单");
-        jd_submit_order();
+        // 提交订单
+        jd_trade();
     }
 });
 
@@ -126,16 +121,7 @@ function check_jd_buy()
     }
 }
 
-// 京东提交订单
-function jd_submit_order() {
-    if ($(".limited-thickbox .extra .ml10").length >= 1) {
-        console.log("返回购物车");
-        document.getElementsByClassName("ml10")[12].click();
-    }
-    console.log("提交订单");
-    $("#order-submit").click();
-    setTimeout("jd_submit_order();", 1000);
-}
+
 
 
 function refresh(){
