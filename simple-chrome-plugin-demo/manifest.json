@@ -17,17 +17,18 @@
 	"content_scripts": 
 	[
 		{
-			"matches": [ "https://*.tmall.com/*", "https://*.jd.com/*" ],
+			"matches": [ "https://*.tmall.com/*", "https://*.jd.com/*", "https://www.converse.com.cn/*" ],
 			"js": ["js/jquery-1.8.3.js", "js/seed-min.js",
 				"js/mySystem.js",
 				"js/tm_buy.js",
 				"js/jd_buy.js",
+				"js/kw_buy.js",
 				"js/content-script.js"
 
 			]
 		}
 	],
-	"permissions": [ "https://*.tmall.com/*", "storage", "https://*.jd.com/*", "tabs", "contextMenus"],
+	"permissions": [ "https://*.tmall.com/*", "storage", "https://*.jd.com/*", "tabs", "contextMenus", "https://www.converse.com.cn/*"],
 	"web_accessible_resources": 
 	[
 		"js/inject.js"

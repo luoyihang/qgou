@@ -64,6 +64,14 @@ KISSY.ready(function(S) {
         // 提交订单
         jd_trade();
     }
+
+
+    // 匡威
+    if (url.indexOf("https://www.converse.com.cn/checkout.htm") >= 0 ) {
+        buy_now();
+    } else if (url.indexOf("https://www.converse.com.cn") >= 0) {
+        kuangwei_buy();
+    }
 });
 
 
@@ -111,7 +119,6 @@ function place_order(str_query)
             }
         }
     })
-
 }
 
 function getUrlParameterByName(name) {

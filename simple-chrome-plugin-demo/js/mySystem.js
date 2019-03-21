@@ -1,7 +1,10 @@
 let myReloadTime = new Date().getTime();
 function reloadPage() {
-    if (window.location.href.indexOf("https://detail.tmall.com") >= 0
-        || window.location.href.indexOf("https://item.jd.com") >= 0) {
+    if (
+        window.location.href.indexOf("https://detail.tmall.com") >= 0
+        || window.location.href.indexOf("https://item.jd.com") >= 0
+        || window.location.href.indexOf("https://www.converse.com.cn") >= 0
+    ) {
         return;
     } else {
         console.log("系统计时开始");
@@ -24,3 +27,6 @@ let isOrder;
 let id;
 // 确定按钮
 let ensure_btn;
+
+
+let myT;
