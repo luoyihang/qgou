@@ -1,16 +1,5 @@
 ﻿console.log('启动');
 
-let buy_btn;
-let order_btn;
-let tmallOrderOnce;
-let jdOrderOnce;
-let leftSpan;
-let url;
-let isOrder;
-let id;
-// 确定按钮
-let ensure_btn;
-
 reloadPage();
 
 

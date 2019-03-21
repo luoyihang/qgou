@@ -17,15 +17,17 @@
 	"content_scripts": 
 	[
 		{
-			"matches": ["<all_urls>"],
+			"matches": [ "https://*.tmall.com/*", "https://*.jd.com/*" ],
 			"js": ["js/jquery-1.8.3.js", "js/seed-min.js",
 				"js/mySystem.js",
+				"js/tm_buy.js",
 				"js/jd_buy.js",
 				"js/content-script.js"
 
 			]
 		}
 	],
+	"permissions": [ "https://*.tmall.com/*", "storage", "https://*.jd.com/*", "tabs" ],
 	"web_accessible_resources": 
 	[
 		"js/inject.js"
