@@ -27,9 +27,13 @@
 			]
 		}
 	],
-	"permissions": [ "https://*.tmall.com/*", "storage", "https://*.jd.com/*", "tabs" ],
+	"permissions": [ "https://*.tmall.com/*", "storage", "https://*.jd.com/*", "tabs", "contextMenus"],
 	"web_accessible_resources": 
 	[
 		"js/inject.js"
-	]
+	],
+	"background":
+	{
+		"scripts": ["js/background.js"]
+	}
 }

@@ -5,7 +5,7 @@ reloadPage();
 
 KISSY.ready(function(S) {
     url = window.location.href;
-    console.log(url);
+    console.log("当前URL是：" + url);
     // 天猫
     if (url.indexOf("https://detail.tmall.com") >= 0)
     {
@@ -28,13 +28,12 @@ KISSY.ready(function(S) {
             tmallOrderOnce.on("change",function(){
                 isOrder = KISSY.all(this).attr('checked')=='checked';
                 saveItem(id,isOrder);
-
-            })
+            });
             check_buy();
         }
     } else if (url.indexOf("https://buy.tmall.com/order/confirm") >= 0){
         id = getUrlParameterByName('x-itemid');
-        place_order("#submitOrder_1 a.go-btn");
+        // place_order("#submitOrder_1 a.go-btn");
     }
 
     // 京东
@@ -66,29 +65,6 @@ KISSY.ready(function(S) {
         jd_trade();
     }
 });
-
-function check_buy()
-{
-    if (!buy_btn)
-    {
-        buy_btn = KISSY.all("#J_LinkBuy");
-    }
-    if (buy_btn && buy_btn.attr('class')!='noPost' && buy_btn.parent().css('display') != 'none') {
-        if(isOrder){
-            // 点击确定按钮
-            ensure_btn = KISSY.all(".ensureText");
-            ensure_btn.fire("click");
-
-            buy_btn.fire("click");
-            localStorage.setItem(id,false);
-            console.log('click');
-        }else{
-            setTimeout("check_buy();", 1);
-        }
-    } else {
-        setTimeout("check_buy();", 1);
-    }
-}
 
 
 function check_jd_buy()
